@@ -7,8 +7,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.location.Location;
 import android.net.Uri;
-import androidx.annotation.NonNull;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.location.LocationResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,7 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
-
 
 //observer pattern
 //publisher subscribe pattern
@@ -87,7 +87,7 @@ public class Location2Service extends BroadcastReceiver {
                                 Cursor data = mDatabaseHelper.getStare();
                                 data.moveToFirst();
 
-                                if(FirebaseAuth.getInstance().getCurrentUser() != null) {
+                                if(FirebaseAuth.getInstance().getCurrentUser() != null && data.getString(0).compareTo("pacient")==0) {
 
                                     double currentLatitude = location.getLatitude(), currentLongitude = location.getLongitude();
 
@@ -104,23 +104,33 @@ public class Location2Service extends BroadcastReceiver {
                                         //double distance = SphericalUtil.computeDistanceBetween(new LatLng(currentLatitude,currentLatitude), new LatLng(homeLatitude,homeLongitude));
                                         //Log.d("distance2",""+distance);
 
-                                        if (results[0] > homeRange && !OutOfRange && data.getString(0).compareTo("pacient")==0) {
+                                        if (results[0] > homeRange && !OutOfRange) {
 
                                             OutOfRange = true;
                                             mDatabaseUser.child("OutOfRange").setValue("RandomValue");
 
-                                            String uri3 = "google.navigation:q=" + homeLatitude + "," + homeRange + "&mode=w";
+                                            if(dataSnapshot.child("Tutore").hasChild("AlertaPacient")) {
 
-                                            Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(uri3));
-                                            intent2.setPackage("com.google.android.apps.maps");
+                                                String uri3 = "google.navigation:q=" + homeLatitude + "," + homeRange + "&mode=w";
 
-                                            Intent callIntent = new Intent(Intent.ACTION_CALL);
-                                            callIntent.setData(Uri.parse("tel:" + callNumber));
+                                                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(uri3));
+                                                intent2.setPackage("com.google.android.apps.maps");
 
-                                            TaskStackBuilder.create(context)
-                                                    .addNextIntent(intent2)
-                                                    .addNextIntentWithParentStack(callIntent)
-                                                    .startActivities();
+                                                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                                                callIntent.setData(Uri.parse("tel:" + callNumber));
+
+                                                TaskStackBuilder.create(context)
+                                                        .addNextIntent(intent2)
+                                                        .addNextIntentWithParentStack(callIntent)
+                                                        .startActivities();
+                                            }
+
+                                        }
+
+                                        if (results[0] < homeRange && OutOfRange && data.getString(0).compareTo("pacient")==0) {
+
+                                            OutOfRange = false;
+                                            mDatabaseUser.child("OutOfRange").removeValue();
 
                                         }
 

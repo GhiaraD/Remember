@@ -92,7 +92,6 @@ public class MainMenu extends AppCompatActivity {
         });
 
 
-
         alarm= (LinearLayout) findViewById(R.id.alarme);
         alarm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -330,7 +329,6 @@ public class MainMenu extends AppCompatActivity {
             dialog.show();
 
 
-
             go.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -342,7 +340,6 @@ public class MainMenu extends AppCompatActivity {
                     intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$DataUsageSummaryActivity"));
                     startActivity(intent);
 
-
                 }
             });
 
@@ -350,12 +347,9 @@ public class MainMenu extends AppCompatActivity {
 
         else
         {
-
-
                     Intent da = new Intent(MainMenu.this, MapsActivity.class);
                     da.putExtra("stare",false);
                     startActivity(da);
-
         }
 
     }
@@ -457,10 +451,8 @@ public class MainMenu extends AppCompatActivity {
                     intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$DataUsageSummaryActivity"));
                     startActivity(intent);
 
-
                 }
             });
-
         }
 
         else
