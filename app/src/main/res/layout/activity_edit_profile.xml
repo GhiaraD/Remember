@@ -1,0 +1,193 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Logarea.Register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here you can edit your data"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="28sp"/>
+
+        <LinearLayout android:layout_marginTop="25dp"
+            android:id="@+id/num"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Last name:"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <EditText
+                    android:id="@+id/nume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Dinescu"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="First name:"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <EditText
+                    android:id="@+id/prenume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Andreea"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Date of birth:"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <EditText
+                    android:id="@+id/dataNast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="01.01.2000"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number:"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <EditText
+                    android:id="@+id/nrTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="0000000000"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Guardian's name:"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <EditText
+                    android:id="@+id/numeTutore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Dragos"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Guardian's phone number:"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <EditText
+                    android:id="@+id/nrUrg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="0000000000"
+                    android:textColorLink="#0174DF"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/editData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editshape"
+                android:padding="10dp"
+                android:text="SAVE THE DATA"
+                android:textSize="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

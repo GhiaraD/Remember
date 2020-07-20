@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.cruciada.MainMenu">
+
+    <item
+        android:id="@+id/setari"
+        android:title="Settings"
+        app:showAsAction="always"/>
+
+</menu>

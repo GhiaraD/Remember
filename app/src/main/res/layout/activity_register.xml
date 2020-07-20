@@ -1,0 +1,119 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Logarea.Register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_marginTop="25dp"
+            android:id="@+id/num"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <EditText android:id="@+id/nume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last name"
+                android:textColorLink="#0174DF"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/prenume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First name"
+                android:textColorLink="#0174DF"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/dataN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date of birth"
+                android:textColorLink="#0174DF"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:inputType="date"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/numeUrg"
+                android:hint="Guardian's name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/tlfUrg"
+                android:hint="Guardian's phone number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:inputType="phone"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/emailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:maxLines="1"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/passRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/passRegisterConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password confirmation"
+                android:background="@drawable/editshape"
+                android:padding="5dp"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:layout_marginBottom="25dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/createAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/actual_round_button"
+                android:padding="10dp"
+                android:text="CREATE"
+                android:textSize="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

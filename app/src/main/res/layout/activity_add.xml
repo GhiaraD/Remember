@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarme.ViewController.AddActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/pill_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicine name"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp"/>
+
+            <EditText android:id="@+id/pill_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pill_name_title"
+                android:maxLength="20"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="center"
+                android:hint="@string/pill_name" />
+
+            <TextView android:id="@+id/time_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pill_name"
+                android:text="Hour"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp"/>
+
+            <TextView android:id="@+id/reminder_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_title"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:layout_marginTop="8dp"/>
+
+            <TextView android:id="@+id/schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reminder_time"
+                android:text="Schedule"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp"/>
+
+            <CheckBox android:id="@+id/every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Daily"
+                android:onClick="onCheckboxClicked"
+                android:layout_below="@+id/schedule"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/checkbox_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/every_day"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp">
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_monday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Monday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Tuesday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_wednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Wednesday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Thursday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_friday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Friday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_saturday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Saturday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+                <com.ghiarad.dragos.myapplication.Alarme.ViewController.CustomCheckBox
+                    android:id="@+id/checkbox_sunday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/Sunday"
+                    android:button="@null"
+                    android:onClick="onCheckboxClicked"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/btn_cancel_alarm"
+            android:text="@string/str_btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/actual_round_button"
+            android:padding="4dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp" />
+
+        <Button
+            android:id="@+id/btn_set_alarm"
+            android:text="@string/str_btn_set_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/actual_round_button"
+            android:padding="4dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

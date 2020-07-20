@@ -1,0 +1,140 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:color">#000000</item>
+    </style>
+
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolbarSubtitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar" parent="Theme.AppCompat">
+        <!-- android:actionMenuTextColor is the color of the text of action (menu) items in the Toolbar, at least in the
+        Theme.AppCompat theme. For some reason, they already get the textColorPrimary when running on API 21, but not on older versions of
+        Android, so this is only necessary to support older Android versions. -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <!--<item name="android:background">@color/colorPrimary</item>-->
+        <item name="theme">@style/Toolbar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlHighlight">#3fff</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleTextAppearance</item>
+        <item name="subtitleTextAppearance">@style/ToolbarSubtitleTextAppearance</item>
+    </style>
+
+
+    <style name="Theme.Blue" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_blue</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Blue</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Blue</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Blue</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Blue</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Blue</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_blue</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_blue</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Blue</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Blue.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Blue" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_blue</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_blue</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_blue</item>
+        <item name="progressBarStyle">@style/ProgressBar.Blue</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Blue" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@drawable/ab_transparent_blue</item>
+        <item name="progressBarStyle">@style/ProgressBar.Blue</item>
+    </style>
+
+    <style name="PopupMenu.Blue" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_blue</item>
+    </style>
+
+    <style name="DropDownListView.Blue" parent="@style/Widget.AppCompat.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_blue</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Blue" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_blue</item>
+    </style>
+
+    <style name="DropDownNav.Blue" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_blue</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_blue</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_blue</item>
+    </style>
+
+    <style name="ProgressBar.Blue" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_blue</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Blue" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_blue</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Blue.Widget" parent="@style/Theme.AppCompat">
+        <item name="popupMenuStyle">@style/PopupMenu.Blue</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Blue</item>
+    </style>
+
+    <!-- Local copy of android:Theme.Holo.Dialog.Alert -->
+    <style name="Theme_Holo_Dialog_Alert" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle_Holo</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    </style>
+
+    <!-- Local copy of android:DialogWindowTitle.Holo -->
+    <style name="DialogWindowTitle_Holo">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+    </style>
+
+    <style name="Widget.Sphinx.ActionBar.Solid" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">#FFA500</item>
+    </style>
+
+
+    <style name="Theme.Sphinx" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarStyle">@style/Widget.Sphinx.ActionBar.Solid</item>
+        <item name="android:alertDialogTheme">@style/Theme_Sphinx_Dialog_Alert</item>
+    </style>
+
+    <style name="Theme_Sphinx_Dialog_Alert" parent="@style/Theme_Holo_Dialog_Alert"></style>
+
+</resources>

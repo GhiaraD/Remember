@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card11"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card12"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card13"
+            android:src="@drawable/question_mark"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card21"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card22"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card23"
+            android:src="@drawable/question_mark"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card31"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card32"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card33"
+            android:src="@drawable/question_mark"
+            />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card41"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card42"
+            android:src="@drawable/question_mark"
+            />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/card43"
+            android:src="@drawable/question_mark"
+            />
+
+    </LinearLayout>
+</LinearLayout>

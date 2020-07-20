@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "319962464631",
+    "firebase_url": "https://alzheimer-36964.firebaseio.com",
+    "project_id": "alzheimer-36964",
+    "storage_bucket": "alzheimer-36964.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319962464631:android:385cdd84de183041",
+        "android_client_info": {
+          "package_name": "com.ghiarad.dragos.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319962464631-8lma1u3sbnjrofugica0eb3hdnphakpu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ghiarad.dragos.myapplication",
+            "certificate_hash": "c62afd8af7bfd1c89c110191e0617c7b751d07db"
+          }
+        },
+        {
+          "client_id": "319962464631-5bu3eso4ijd13uco5g6q5b731eak2l3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB65DTT7amtog_Hk6eZixoMFyHTZDWfc5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319962464631-5bu3eso4ijd13uco5g6q5b731eak2l3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

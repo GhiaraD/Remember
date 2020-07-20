@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the guardian code"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:maxLength="5"
+        android:id="@+id/codintrodus"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The code is incorrect"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FF3333"
+        android:visibility="gone"
+        android:id="@+id/codgresit"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:id="@+id/checkcode"
+        android:textSize="25sp"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/actual_round_button"
+        android:layout_marginBottom="10dp"
+        />
+
+</LinearLayout>

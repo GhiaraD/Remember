@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ghiarad.dragos.myapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/logo"
+        android:label="Remember"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Tutore.GraphPtJoc"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SetariLocatie"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Tutore.MedicineCheck"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditProfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Tutore.SetariTutore"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SeeProfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Logarea.Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Tutore.TutoreMain"
+            android:screenOrientation="portrait"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".JocMemorie"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainMenu"
+            android:screenOrientation="portrait"/>
+
+        <service android:name=".LocationService" />
+        <service android:name=".ReminderService"/>
+        <service android:name=".AlertService"/>
+
+        <receiver
+            android:name=".Location2Service"/>
+
+        <activity android:name=".Galeria.SinglePhoto"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Galeria.customizePhoto"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Logarea.Register"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Galeria.MainGallery"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NOTITE.notite"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NOTITE.ListDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NOTITE.EditDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OnBoarding.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Alarme.ViewController.AddActivity"
+            android:label="@string/title_activity_add"
+            android:parentActivityName=".Alarme.ViewController.AlarmeActivity"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Alarme.ViewController.AlarmeActivity" />
+        </activity>
+        <activity
+            android:name=".Alarme.ViewController.AlertActivity"
+            android:label="@string/title_activity_alert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="teamqitalach.pillapp.alertactivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Alarme.ViewController.AlarmeActivity"
+            android:label="Remember"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Alarme.ViewController.PillBoxActivity"
+            android:label="@string/title_activity_edit"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Alarme.ViewController.ScheduleActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName=".Alarme.ViewController.AlarmeActivity"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Alarme.ViewController.AlarmeActivity" />
+        </activity>
+        <activity
+            android:name=".Alarme.ViewController.EditActivity"
+            android:label="@string/title_activity_edit"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
