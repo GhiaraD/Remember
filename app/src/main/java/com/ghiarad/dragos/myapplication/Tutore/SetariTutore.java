@@ -118,12 +118,12 @@ public class SetariTutore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mAuth.signOut();
                 if(isServiceRunning(AlertService.class)){
                     stopService();
                     FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                         .child("Tutore").child("AlertaPacient").removeValue();
                 }
+                mAuth.signOut();
                 startActivity(new Intent(SetariTutore.this, Login.class));
 
             }
