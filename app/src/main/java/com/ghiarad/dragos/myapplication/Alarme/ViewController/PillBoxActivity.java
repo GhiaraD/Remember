@@ -2,11 +2,11 @@ package com.ghiarad.dragos.myapplication.Alarme.ViewController;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ghiarad.dragos.myapplication.Alarme.Model.Alarm;
 import com.ghiarad.dragos.myapplication.Alarme.Model.Pill;
@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-
 
 public class PillBoxActivity extends AppCompatActivity {
     ExpandableListAdapter listAdapter;
@@ -63,11 +62,6 @@ public class PillBoxActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_pill_box, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

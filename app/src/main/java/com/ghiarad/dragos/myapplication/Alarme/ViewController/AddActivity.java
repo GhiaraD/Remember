@@ -6,9 +6,6 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import androidx.core.app.NavUtils;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -19,6 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import com.ghiarad.dragos.myapplication.Alarme.Model.Alarm;
 import com.ghiarad.dragos.myapplication.Alarme.Model.Pill;
@@ -185,13 +185,6 @@ public class AddActivity extends AppCompatActivity {
 
         Button btnQuitAlarm = (Button) findViewById(R.id.btn_cancel_alarm);
         btnQuitAlarm.setOnClickListener(cancelClickListener);
-    }
-
-    @Override
-    /** Inflate the menu; this adds items to the action bar if it is present */
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add, menu);
-        return true;
     }
 
     public void onCheckboxClicked(View view) {

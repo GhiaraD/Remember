@@ -124,17 +124,6 @@
             android:label="@string/title_activity_edit"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Alarme.ViewController.ScheduleActivity"
-            android:label="@string/title_activity_setting"
-            android:parentActivityName=".Alarme.ViewController.AlarmeActivity"
-            android:screenOrientation="portrait">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Alarme.ViewController.AlarmeActivity" />
-        </activity>
-        <activity
             android:name=".Alarme.ViewController.EditActivity"
             android:label="@string/title_activity_edit"
             android:screenOrientation="portrait"/>

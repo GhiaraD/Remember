@@ -30,8 +30,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosititon) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
-                .get(childPosititon);
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition)).get(childPosititon);
     }
 
     @Override
@@ -58,25 +57,17 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         // The second part is a string of 0 and 1 that works as a boolean list
         String daysOfWeek = parts[1];
 
-        TextView timeListChild = (TextView) convertView
-                .findViewById(R.id.pill_box_time);
+        TextView timeListChild = (TextView) convertView.findViewById(R.id.pill_box_time);
         timeListChild.setText(time);
 
         // Get all the textview objects from the xml file
-        TextView monday = (TextView) convertView
-                .findViewById(R.id.pill_box_monday);
-        TextView tuesday = (TextView) convertView
-                .findViewById(R.id.pill_box_tuesday);
-        TextView wednesday = (TextView) convertView
-                .findViewById(R.id.pill_box_wednesday);
-        TextView thursday = (TextView) convertView
-                .findViewById(R.id.pill_box_thursday);
-        TextView friday = (TextView) convertView
-                .findViewById(R.id.pill_box_friday);
-        TextView saturday = (TextView) convertView
-                .findViewById(R.id.pill_box_saturday);
-        TextView sunday = (TextView) convertView
-                .findViewById(R.id.pill_box_sunday);
+        TextView monday = (TextView) convertView.findViewById(R.id.pill_box_monday);
+        TextView tuesday = (TextView) convertView.findViewById(R.id.pill_box_tuesday);
+        TextView wednesday = (TextView) convertView.findViewById(R.id.pill_box_wednesday);
+        TextView thursday = (TextView) convertView.findViewById(R.id.pill_box_thursday);
+        TextView friday = (TextView) convertView.findViewById(R.id.pill_box_friday);
+        TextView saturday = (TextView) convertView.findViewById(R.id.pill_box_saturday);
+        TextView sunday = (TextView) convertView.findViewById(R.id.pill_box_sunday);
 
         // The color indicates the days of week when the alarm goes off
         int colorSelected = _context.getResources().getColor(R.color.blue600);
@@ -135,8 +126,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
-                .size();
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition)).size();
     }
 
     @Override
@@ -155,8 +145,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent) {
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+
         String headerTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -164,10 +154,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.list_group, null);
         }
 
-        TextView lblListHeader = (TextView) convertView
-                .findViewById(R.id.lblListHeader);
+        TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
+
+//        TextView editeazaAlarma = (TextView) convertView.findViewById(R.id.editeazaAlarma);
+//        editeazaAlarma.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                Intent intent = new Intent(_context, EditActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                _context.startActivity(intent);
+//
+//            }
+//        });
 
         return convertView;
     }
