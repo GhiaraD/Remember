@@ -15,13 +15,14 @@
         android:textColor="#f0f0f0"
         android:layout_weight="1"/>
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Edit"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:textSize="24sp"-->
-<!--        android:id="@+id/editeazaAlarma">-->
-<!--    </TextView>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/edit"
+        android:layout_gravity="center"
+        android:id="@+id/editeazaAlarma">
+    </ImageView>
+
 
 </LinearLayout>
