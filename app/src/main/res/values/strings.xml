@@ -60,7 +60,8 @@
     <string name="title_activity_edit">EditActivity</string>
     <string name="title_activity_setting">SettingActivity</string>
     <string name="action_edit">edit</string>
-    <string name="desc">The graph represents the results of your loved one at the memory game, based on tests designed in clinics. Each point represents the number of seconds a game was completed.</string>>
+    <string name="desc">The graph represents the results of your loved one at the memory game, based on tests designed in clinics. Each point represents the number of seconds a game was completed.</string>
+    >
 
 
     <string name="ob_header1">EASE YOUR LIFE</string>
@@ -70,4 +71,13 @@
     <string name="ob_desc1">Use our feature package for your everyday life</string>
     <string name="ob_desc2">We set you alarms so you never forget when to take your medication</string>
     <string name="ob_desc3">We help you get home safely and contact the people who can help you</string>
+    <string name="title_activity_test_il_sterg_imediat">test_il_sterg_imediat</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

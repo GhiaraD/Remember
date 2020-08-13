@@ -122,7 +122,8 @@
     <style name="DialogWindowTitle_Holo">
         <item name="android:maxLines">1</item>
         <item name="android:scrollHorizontally">true</item>
-        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle
+        </item>
     </style>
 
     <style name="Widget.Sphinx.ActionBar.Solid" parent="@android:style/Widget.Holo.ActionBar.Solid">

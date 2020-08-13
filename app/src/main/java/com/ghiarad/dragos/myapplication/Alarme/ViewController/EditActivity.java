@@ -6,7 +6,6 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ghiarad.dragos.myapplication.Alarme.Model.Alarm;
 import com.ghiarad.dragos.myapplication.Alarme.Model.Pill;
@@ -234,7 +235,7 @@ public class EditActivity extends AppCompatActivity {
         View.OnClickListener cancelClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent returnHome = new Intent(getBaseContext(), PillBoxActivity.class);
+                Intent returnHome = new Intent(getBaseContext(), AlarmeActivity.class);
                 startActivity(returnHome);
                 finish();
             }
@@ -333,14 +334,15 @@ public class EditActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            Intent returnPillBox = new Intent(getBaseContext(), PillBoxActivity.class);
+            Intent returnPillBox = new Intent(getBaseContext(), AlarmeActivity.class);
             startActivity(returnPillBox);
             finish();
 
             Toast.makeText(getBaseContext(), "Alarm for " + tempPill_name + " is deleted successfully", Toast.LENGTH_SHORT).show();
             return true;
         }
-        Intent returnHome = new Intent(getBaseContext(), PillBoxActivity.class);
+
+        Intent returnHome = new Intent(getBaseContext(), AlarmeActivity.class);
         startActivity(returnHome);
         finish();
         return super.onOptionsItemSelected(item);
@@ -361,7 +363,7 @@ public class EditActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent returnPillBoxActivity = new Intent(getBaseContext(), PillBoxActivity.class);
+        Intent returnPillBoxActivity = new Intent(getBaseContext(), AlarmeActivity.class);
         startActivity(returnPillBoxActivity);
         finish();
     }

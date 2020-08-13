@@ -21,4 +21,5 @@
     <dimen name="button_text">18sp</dimen>
     <dimen name="ob_header_text_size">22sp</dimen>
     <dimen name="ob_desc_text_size">18sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

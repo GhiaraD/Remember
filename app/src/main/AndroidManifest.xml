@@ -26,23 +26,30 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Tutore.GraphPtJoc"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SetariLocatie"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Tutore.MedicineCheck"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".EditProfile"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Tutore.SetariTutore"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SeeProfile"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Logarea.Login"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Tutore.TutoreMain"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Tutore.GraphPtJoc"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetariLocatie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tutore.MedicineCheck"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tutore.SetariTutore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SeeProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Logarea.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tutore.TutoreMain"
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -58,34 +65,43 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".JocMemorie"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainMenu"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JocMemorie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenu"
+            android:screenOrientation="portrait" />
 
         <service android:name=".LocationService" />
-        <service android:name=".ReminderService"/>
-        <service android:name=".AlertService"/>
+        <service android:name=".ReminderService" />
+        <service android:name=".AlertService" />
 
-        <receiver
-            android:name=".Location2Service"/>
+        <receiver android:name=".Location2Service" />
 
-        <activity android:name=".Galeria.SinglePhoto"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Galeria.customizePhoto"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Logarea.Register"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Galeria.MainGallery"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NOTITE.notite"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NOTITE.ListDataActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NOTITE.EditDataActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".OnBoarding.MainActivity"
+        <activity
+            android:name=".Galeria.SinglePhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Galeria.customizePhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Logarea.Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Galeria.MainGallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NOTITE.notite"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NOTITE.ListDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NOTITE.EditDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OnBoarding.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -107,8 +123,8 @@
         <activity
             android:name=".Alarme.ViewController.AlertActivity"
             android:label="@string/title_activity_alert"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="teamqitalach.pillapp.alertactivity" />
 
@@ -118,15 +134,11 @@
         <activity
             android:name=".Alarme.ViewController.AlarmeActivity"
             android:label="Remember"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Alarme.ViewController.PillBoxActivity"
-            android:label="@string/title_activity_edit"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Alarme.ViewController.EditActivity"
             android:label="@string/title_activity_edit"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
