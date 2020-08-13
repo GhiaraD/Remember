@@ -88,85 +88,102 @@ public class AddActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int checkBoxCounter = 0;
+                int checkBoxCounter2 = 0;
 
                 EditText editText = (EditText) findViewById(R.id.pill_name);
                 String pill_name = editText.getText().toString();
 
-                Alarm alarm = new Alarm();
+                if(!pill_name.isEmpty()) {
 
-                if (!pillBox.pillExist(getApplicationContext(), pill_name)) {
-                    Pill pill = new Pill();
-                    pill.setPillName(pill_name);
-                    alarm.setHour(hour);
-                    alarm.setMinute(minute);
-                    alarm.setPillName(pill_name);
-                    alarm.setDayOfWeek(dayOfWeekList);
-                    pill.addAlarm(alarm);
-                    long pillId = pillBox.addPill(getApplicationContext() ,pill);
-                    pill.setPillId(pillId);
-                    pillBox.addAlarm(getApplicationContext(), alarm, pill);
-                } else { // If Pill already exists
-                    Pill pill = pillBox.getPillByName(getApplicationContext(), pill_name);
-                    alarm.setHour(hour);
-                    alarm.setMinute(minute);
-                    alarm.setPillName(pill_name);
-                    alarm.setDayOfWeek(dayOfWeekList);
-                    pill.addAlarm(alarm);
-                    pillBox.addAlarm(getApplicationContext(), alarm, pill);
-                }
-                List<Long> ids = new LinkedList<Long>();
-                try {
-                    List<Alarm> alarms = pillBox.getAlarmByPill(getApplicationContext(), pill_name);
-                    for(Alarm tempAlarm: alarms) {
-                        if(tempAlarm.getHour() == hour && tempAlarm.getMinute() == minute) {
-                            ids = tempAlarm.getIds();
-                            break;
+                    for (int i = 0; i < 7; i++) {
+                        if (dayOfWeekList[i]) {
+                            checkBoxCounter2++;
                         }
                     }
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                }
 
-                for(int i=0; i<7; i++) {
-                    if (dayOfWeekList[i] && pill_name.length() != 0) {
+                    if (checkBoxCounter2 != 0) {
 
-                        int dayOfWeek = i+1;
+                        Alarm alarm = new Alarm();
 
-                        long _id = ids.get(checkBoxCounter);
-                        int id = (int) _id;
-                        checkBoxCounter++;
+                        if (!pillBox.pillExist(getApplicationContext(), pill_name)) {
+                            Pill pill = new Pill();
+                            pill.setPillName(pill_name);
+                            alarm.setHour(hour);
+                            alarm.setMinute(minute);
+                            alarm.setPillName(pill_name);
+                            alarm.setDayOfWeek(dayOfWeekList);
+                            pill.addAlarm(alarm);
+                            long pillId = pillBox.addPill(getApplicationContext(), pill);
+                            pill.setPillId(pillId);
+                            pillBox.addAlarm(getApplicationContext(), alarm, pill);
+                        } else { // If Pill already exists
+                            Pill pill = pillBox.getPillByName(getApplicationContext(), pill_name);
+                            alarm.setHour(hour);
+                            alarm.setMinute(minute);
+                            alarm.setPillName(pill_name);
+                            alarm.setDayOfWeek(dayOfWeekList);
+                            pill.addAlarm(alarm);
+                            pillBox.addAlarm(getApplicationContext(), alarm, pill);
+                        }
+                        List<Long> ids = new LinkedList<Long>();
+                        try {
+                            List<Alarm> alarms = pillBox.getAlarmByPill(getApplicationContext(), pill_name);
+                            for (Alarm tempAlarm : alarms) {
+                                if (tempAlarm.getHour() == hour && tempAlarm.getMinute() == minute) {
+                                    ids = tempAlarm.getIds();
+                                    break;
+                                }
+                            }
+                        } catch (URISyntaxException e) {
+                            e.printStackTrace();
+                        }
 
-                        Intent intent = new Intent(getBaseContext(), AlertActivity.class);
-                        intent.putExtra("pill_name", pill_name);
+                        for (int i = 0; i < 7; i++) {
+                            if (dayOfWeekList[i]) {
 
-                        operation = PendingIntent.getActivity(getBaseContext(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                                int dayOfWeek = i + 1;
 
-                        alarmManager = (AlarmManager) getBaseContext().getSystemService(ALARM_SERVICE);
+                                long _id = ids.get(checkBoxCounter);
+                                int id = (int) _id;
+                                checkBoxCounter++;
 
-                        Calendar calendar = Calendar.getInstance();
+                                Intent intent = new Intent(getBaseContext(), AlertActivity.class);
+                                intent.putExtra("pill_name", pill_name);
 
-                        calendar.set(Calendar.HOUR_OF_DAY, hour);
-                        calendar.set(Calendar.MINUTE, minute);
-                        calendar.set(Calendar.SECOND, 0);
-                        calendar.set(Calendar.MILLISECOND, 0);
-                        calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
+                                operation = PendingIntent.getActivity(getBaseContext(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                        long alarm_time = calendar.getTimeInMillis();
+                                alarmManager = (AlarmManager) getBaseContext().getSystemService(ALARM_SERVICE);
 
-                        if (calendar.before(Calendar.getInstance()))
-                            alarm_time += AlarmManager.INTERVAL_DAY * 7;
+                                Calendar calendar = Calendar.getInstance();
 
-                        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, alarm_time,
-                                alarmManager.INTERVAL_DAY * 7, operation);
+                                calendar.set(Calendar.HOUR_OF_DAY, hour);
+                                calendar.set(Calendar.MINUTE, minute);
+                                calendar.set(Calendar.SECOND, 0);
+                                calendar.set(Calendar.MILLISECOND, 0);
+                                calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
+
+                                long alarm_time = calendar.getTimeInMillis();
+
+                                if (calendar.before(Calendar.getInstance()))
+                                    alarm_time += AlarmManager.INTERVAL_DAY * 7;
+
+                                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, alarm_time,
+                                        AlarmManager.INTERVAL_DAY * 7, operation);
+                            }
+                        }
+
+                        Toast.makeText(getBaseContext(), "Alarm for " + pill_name + " is set successfully", Toast.LENGTH_SHORT).show();
+                        Intent returnHome = new Intent(getBaseContext(), AlarmeActivity.class);
+                        startActivity(returnHome);
+                        finish();
+
+                    } else {
+                        Toast.makeText(getBaseContext(), "Pease select a schedule for your alarm", Toast.LENGTH_SHORT).show();
                     }
                 }
-                if(checkBoxCounter == 0 || pill_name.length() == 0)
-                    Toast.makeText(getBaseContext(), "Please input a pill name or check at least one day!", Toast.LENGTH_SHORT).show();
-                else { // Input form is completely filled out
-                    Toast.makeText(getBaseContext(), "Alarm for " + pill_name + " is set successfully", Toast.LENGTH_SHORT).show();
-                    Intent returnHome = new Intent(getBaseContext(), AlarmeActivity.class);
-                    startActivity(returnHome);
-                    finish();
+                else
+                {
+                    Toast.makeText(getBaseContext(), "Please name your pill", Toast.LENGTH_SHORT).show();
                 }
             }
         };
